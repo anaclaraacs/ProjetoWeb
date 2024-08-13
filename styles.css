@@ -50,3 +50,84 @@ nav ul{
     width: 30px;
     cursor: pointer;
 }
+.nav-icon-container img:first-child{
+    margin-right: 1rem;
+}
+
+nav ul li{
+    color: #fff;
+    margin-right: 1.5rem;
+    cursor: pointer;
+
+}
+nav ul li:hover{
+    transform: translate(-5px);
+    transition: all 0.2s;
+    font-weight: bold;
+}
+.menu-button{
+    display:none;
+}
+header{
+    
+        background-image: url('images/hotel.png'); /* Define a imagem de fundo */
+        background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: no-repeat; /* Impede a repetição da imagem */
+        height: 400px; /* Ajuste conforme necessário */
+    
+    
+    
+}
+.header-bottom-side{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding: 1rem;
+}
+.header-bottom-side-left{
+    height: 100%;
+    flex-basis:50%;
+    padding-bottom: 100px;
+}
+.header-bottom-side-left h2{
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+    color: #0a0909;
+}
+.header-bottom-side-left p{
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.header-bottom-side-left button{
+    background: color #da6517;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 3.8rem;
+    border-radius:9999px;
+    color: #f09b5e;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s;
+    
+
+}
+.header-bottom-side-left button:hover{
+    background-color: #793a0d;
+}
+
+
+
+.header-bottom-ride{
+    flex-basis: 50cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-bottom-side-right img{
+        width: 100%; /* Ajusta a largura da imagem ao tamanho do contêiner pai */
+        height: auto; /* Mantém a proporção da imagem */
+        max-width: 500px; /* Define a largura máxima da imagem */
+    
+    
+}
