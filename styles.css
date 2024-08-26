@@ -133,6 +133,142 @@ header{
     
     
 }
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    font-family: 'arial';
+
+}
+
+/* Header */
+
+.header-inner-content{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar{
+    background-color: bisque;
+    padding: 1rem;
+    position: sticky; /* para o navbar se manter no topo */
+    top: 0;
+    box-shadow: 10px 0px 10px #956830;
+    z-index: 99;
+
+}
+.navbar>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.logo{
+    color: rgb(176, 132, 50);
+}
+.logo span{
+    color: rgb(176, 132, 50);
+    
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+}
+.nav-icon-container{
+    display: flex;
+    align-items:center;
+}
+.nav-icon-container img{
+    width: 30px;
+    cursor: pointer;
+}
+.nav-icon-container img:first-child{
+    margin-right: 1rem;
+}
+
+nav ul li{
+    color: rgb(176, 132, 50);
+    margin-right: 1.5rem;
+    cursor: pointer;
+
+}
+nav ul li:hover{
+    transform: translate(-5px);
+    transition: all 0.2s;
+    font-weight: bold;
+}
+.menu-button{
+    display:none;
+}
+header{
+        background-image: url('images/hotel.png'); /* Define a imagem de fundo */
+        background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: no-repeat; /* Impede a repetição da imagem */
+        height: 400px; /* Ajuste conforme necessário */
+    
+}
+.header-bottom-side{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding: 1rem;
+}
+.header-bottom-side-left{
+    height: 100%;
+    flex-basis:50%;
+    padding-bottom: 100px;
+    background-color: bisque;
+    opacity: 0.8;
+    padding: 0.8rem 3.8rem;
+    border-radius: 10px;
+}
+.header-bottom-side-left h2{
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+    color: #0a0909;
+}
+.header-bottom-side-left p{
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.header-bottom-side-left button{
+    background: color #da6517;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 3.8rem;
+    border-radius:9999px;
+    color: #f09b5e;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s;
+    
+
+}
+.header-bottom-side-left button:hover{
+    background-color: #793a0d;
+}
+
+.header-bottom-ride{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-bottom-side-right img{
+        width: 50%; /* Ajusta a largura da imagem ao tamanho do contêiner pai */
+        height: auto; /* Mantém a proporção da imagem */
+        max-width: 500px; /* Define a largura máxima da imagem */
+    
+    
+}
 
 /* Media Queries*/
 
@@ -155,6 +291,159 @@ header{
         opacity: 0.8;
     }
 
+    .hotel img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .show-menu nav{
+        display: block;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav ul li{
+        text-align: center;
+        padding: 0.8rem;
+    }
+
+    .header-bottom-side-left{
+        align-items: flex-start; /*ajustar isso aqui*/
+    }
+
+}
+
+/* Header*/
+
+/* Main Content */
+
+main{
+    background-color: antiquewhite;
+}
+
+.colored-background{
+    background-color: bisque;
+}
+
+.page-inner-content{
+    max-width: 1280px;
+    margin: 0 auto;
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: contain;
+    }
+}
+
+.page-inner-content .hotel img {
+    width: 100%; /* Faz a imagem ocupar toda a largura disponível no contêiner do hotel */
+    height: 200px; /* Define uma altura fixa para todas as imagens */
+    object-fit: cover; /* Ajusta a imagem para preencher o contêiner, cortando o excesso se necessário */
+    border-radius: 8px; /* Adiciona cantos arredondados (opcional) */
+}
+
+
+.cols{
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 4rem 1rem;
+}
+
+.cols-3{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.cols-4{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem
+}
+
+.cols>*{ /*com isso aqui quando passa o cursor em cima ele se transforma numa maozinha*/
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cols>*:hover{
+    transform: translateY(-5px);
+}
+
+.section-title{
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.8rem;
+}
+
+.subtitle-underline{
+    width: 100px;
+    height: 5px;
+    background: #793a0d;
+    border-radius: 9999px;
+    margin: 8px auto 0 auto;
+}
+
+.hotel{
+    color: maroon;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-name{
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+
+.rate{
+    font-size: 1.3rem;
+}
+
+.exclusive-container {
+    background-color: #dcdad8;
+    color: rgb(170, 168, 166);
+    display: flex;
+    flex-direction: row-reverse; /* Altera a direção dos elementos filhos */
+    padding: 5rem 1rem;
+    width: 100vw; /* Faz a div ocupar 100% da largura da janela */
+    margin-left: calc(-50vw + 50%); /* Compensa a margem para centralizar a div */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+    border-radius: 0; /* Remove o arredondamento das bordas */
+}
+
+
+
+
+.exclusive-container img{
+    max-width: 500px;
+}
+
+/* Media Queries*/
+
+@media(max-width: 800px) {
+    .logo{
+        font-size: 1.2rem;
+    }
+
+    .menu-button{
+        display: block;
+    }
+   
+    nav{
+        position: absolute;
+        background-color: bisque;
+        width: 100%;
+        top: 80px;
+        display: none;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+
+    
     .show-menu nav{
         display: block;
     }
@@ -254,7 +543,7 @@ main{
 }
 
 .exclusive-container{
-    background-color: #956830;
+    background-color: antiquewhite;
     color: rgb(176, 132, 50);
     flex-direction: row-reverse;
     padding: 5rem 1rem;
@@ -264,3 +553,104 @@ main{
 .exclusive-container img{
     max-width: 500px;
 }
+
+/* Media queries */
+@media (max-width:800px){
+    .section-title{
+        font-size: 1rem;
+    }
+
+    .cols-3{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .cols-4{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .hotel-name, .rate , .charge-per-day{
+        max-height: 1rem;
+        overflow: hidden;
+        font-size: 0.8rem;
+    }
+    .exclusive-container{
+        flex-direction: column-reverse;
+    }
+
+    .exclusive-container img{
+        margin-bottom: 4rem;
+    }
+}
+
+/*Fotter*/
+.footer-content{
+    display: flex;
+    align-items: center;
+    color:#f09b5e;
+    padding: 4rem 1rem;
+    gap: 2rem;
+}
+.download-options>*{
+    margin: 1rem  0;
+
+}
+.download-options>p:first-child{
+    font-weight: bold;
+    color: #fff;
+}
+.download-options>div{
+    display: flex;
+}
+.download-options> div img{
+    width: 180px;
+}
+.logo-footer{
+    text-align: center;
+}
+.links-footer h3{
+    color: #fff;
+    margin-bottom: 0.8rem;
+
+}
+
+
+.links-footer ul li{
+    margin-bottom: 0.5rem;
+    cursor:pointer
+}
+
+.links-footer ul{
+    list-style: none;
+    color: #f09b5e;
+}
+.copyright{
+    color:#fff;
+    padding: 2rem 0;
+    text-align: center;
+
+}
+
+/*Media queries*/
+@media (max-width:800px){
+    .footer-content{
+        display: inline;
+        font-size: 0.8rem;
+    }
+
+    .footer-content>div{
+      padding: 1rem;
+    }
+
+    .download-options>div{
+        display: inline;
+    }
+
+    .download-options>div img{
+        width: 120px;
+    }
+
+    .copyright{
+        font-size: 0.8rem;
+    }
+}
+
+    
