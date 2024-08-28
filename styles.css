@@ -120,12 +120,7 @@ header{
     background-color: #793a0d;
 }
 
-.header-bottom-ride{
-    flex-basis: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .header-bottom-side-right img{
         width: 50%; /* Ajusta a largura da imagem ao tamanho do contêiner pai */
         height: auto; /* Mantém a proporção da imagem */
@@ -133,6 +128,57 @@ header{
     
     
 }
+
+.booking-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px; /* Espaçamento entre os campos */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.booking-form .form-group {
+    flex: 1;
+    max-width: 200px; /* Largura máxima para cada campo */
+    text-align: center;
+}
+
+.booking-form .form-group input {
+    width: 100%;
+    padding: 10px; /* Espaçamento interno dos campos */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto dentro dos inputs */
+}
+
+.booking-form .form-group button {
+    padding: 12px 30px;
+    background-color: #f76c6c;
+    color: white;
+    border: none;
+    border-radius: 20px; /* Bordas arredondadas para o botão */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Adiciona uma margem superior para mover o botão para baixo */
+}
+
+.booking-form .form-group button:hover {
+    background-color: #e85a5a; /* Efeito hover no botão */
+}
+
+.booking-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff; /* Cor branca para os rótulos */
+    font-size: 14px;
+    text-align: center;
+}
+
 *{
     box-sizing:border-box;
     padding: 0;
@@ -240,7 +286,7 @@ header{
     margin-bottom: 1.5rem;
 }
 .header-bottom-side-left button{
-    background: color #da6517;
+    background-color:  #da6517;
     border: none;
     cursor: pointer;
     padding: 0.8rem 3.8rem;
@@ -252,13 +298,12 @@ header{
     
 
 }
-.header-bottom-side-left button:hover{
-    background-color: #793a0d;
-}
+
+
 
 .header-bottom-ride{
     flex-basis: 50%;
-    display: flex;
+    display: flex;contain: ;
     align-items: center;
     justify-content: center;
 }
@@ -653,4 +698,146 @@ main{
     }
 }
 
-    
+.maroon-background {
+    position: relative; /* Para permitir o uso de position: absolute nos filhos */
+}
+
+.divider {
+    position: absolute; /* Permite que a divisão seja posicionada em relação ao elemento pai */
+    left: 0; /* Alinha a divisão à esquerda da página */
+    right: 0; /* Alinha a divisão à direita da página */
+    height: 5px; /* Altura da divisão */
+    background-color: #ff5722; /* Cor da divisão */
+    margin: 20px 5; /* Espaçamento acima e abaixo da divisão */
+}
+/* Estilização da seção promocional */
+.promo-section {
+    background-color: #9a9696; /* Cor de fundo marrom */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff; /* Cor do texto branco */
+}
+
+.promo-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.promo-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.promo-text h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.promo-text p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.promo-button {
+    background-color: #ff5722; /* Cor do botão */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.promo-button:hover {
+    background-color: #e64a19; /* Cor do botão ao passar o mouse */
+}
+
+.promo-image img {
+    max-width: 300px; /* Largura máxima da imagem */
+    height: auto;
+}
+.hidden-form {
+    display: none;
+}
+
+/* Exibe o formulário quando a classe 'visible-form' é adicionada */
+.visible-form {
+    display: block;
+    /* Adicione outros estilos conforme necessário */
+}
+
+/* estilo do formulário  */
+
+#contestForm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 400px;
+    z-index: 1000; /* Garantir que o formulário esteja acima de outros elementos */
+    transition: all 0.3s ease;
+}
+
+#contestForm h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#contestForm label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+#contestForm input, 
+#contestForm textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+#contestForm button {
+    background-color: #f4944b; /* Cor do botão */
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contestForm button:hover {
+    background-color: #d07a2f; /* Cor do botão ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+#contestForm button:active {
+    transform: translateY(1px);
+}
+
+.hidden-form {
+    display: none;
+}
+
+.visible-form {
+    display: block;
+    /* Adicione outros estilos conforme necessário */
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospedia | Guia de Hotéis </title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 <body>
     <div class="navbar show-menu">
         <div class="header-inner-content">
@@ -54,6 +55,30 @@
                 </div>
             </div>
         </div>
+        <div class="page-inner-content">
+            <div class="booking-form"> <!---onde faz a reserva-->
+                <div class="form-group">
+                    <label for="checkin">Check-in</label>
+                    <input type="date" id="checkin" placeholder="Check-in">
+                </div>
+                <div class="form-group">
+                    <label for="checkout">Check-out</label>
+                    <input type="date" id="checkout" placeholder="Check-out">
+                </div>
+                <div class="form-group">
+                    <label for="adults">Adultos</label>
+                    <input type="number" id="adults" min="1" max="10" value="2">
+                </div>
+                <div class="form-group">
+                    <label for="children">Crianças</label>
+                    <input type="number" id="children" min="0" max="10" value="2">
+                </div>
+                <div class="form-group">
+                    <button type="button">RESERVAR</button>
+                </div>
+            </div>
+        </div>
+        
 
         <div class="page-inner-content">
             <h3 class="section-title">Hotéis Selecionados</h3>
@@ -106,13 +131,13 @@
                     <img src="images/imgHotel14.webp" alt=""> <!--aqui colocamos imagens de outro hotel-->
                     <p class="hotel-name"> ZANK BY TOQUE</p>
                     <p class="rate">&#9733,&#9733,&#9733,&#9733,&#9734</p> <!--&#9733 eh estrela cheia e o &#9734 eh estrela vazia-->
-                    <p class="charge-per-day">R$ 150,00</p> <!--esse daqui eh o valor da diaria-->
+                    <p class="charge-per-day">R$ 200,00</p> <!--esse daqui eh o valor da diaria-->
                 </div>
                 <div class="hotel"> <!--esse trecho corresponde as imagens dos hoteis selecionados, com seus respectivos valores de diaria e as estrelas-->
                     <img src="images/imgHotel15.webp" alt=""> <!--aqui colocamos imagens de outro hotel-->
                     <p class="hotel-name">PEPPER VILLAGE</p>
                     <p class="rate">&#9733,&#9733,&#9733,&#9733,&#9734</p> <!--&#9733 eh estrela cheia e o &#9734 eh estrela vazia-->
-                    <p class="charge-per-day">R$ 150,00</p> <!--esse daqui eh o valor da diaria-->
+                    <p class="charge-per-day">R$ 250,00</p> <!--esse daqui eh o valor da diaria-->
                 </div>
             </div>
             <div class="cols cols-4">
@@ -126,7 +151,7 @@
                     <img src="images/imgHotel17.webp" alt=""> <!--aqui colocamos imagens de outro hotel-->
                     <p class="hotel-name"> THE ELSER HOTEL</p>
                     <p class="rate">&#9733,&#9733,&#9733,&#9733,&#9734</p> <!--&#9733 eh estrela cheia e o &#9734 eh estrela vazia-->
-                    <p class="charge-per-day">R$ 150,00</p> <!--esse daqui eh o valor da diaria-->
+                    <p class="charge-per-day">R$ 200,00</p> <!--esse daqui eh o valor da diaria-->
                 </div>
                 <div class="hotel"> <!--esse trecho corresponde as imagens dos hoteis selecionados, com seus respectivos valores de diaria e as estrelas-->
                     <img src="images/imgHotel18.webp" alt=""> <!--aqui colocamos imagens de outro hotel-->
@@ -143,22 +168,21 @@
             </div>
         </div>
 
-        <div class="maroon-background">
-            <div class="header-inner-content ">
-                <div class="header-bottom-side exclusive-container">
-                    <div class="header-bottom-side-left">
-                        <h3>
-                            Concorra a uma viagem inscrevendo-se no link abaixo.
-                        </h3>
-                        <p>
-                            A viagem dos seus sonhos em um dos hotéis com maior classificação em nosso site!
-                        </p>
-                        <button>Quero concorrer&#8594;</button>
-                    </div>
-                    <div class="header-bottom-side-rigth">
-                        <img src="images/cart.png" alt="">
-                    </div>
-                    
+        <div class="promo-section">
+            <div class="promo-content">
+                <div class="promo-text">
+                    <h3>Concorra a uma viagem inscrevendo-se no link abaixo.</h3>
+                    <p>A viagem dos seus sonhos em um dos hotéis com maior classificação em nosso site!</p>
+                    <a href="javascript:void(0);" class="promo-button"id="openForm">Quero concorrer &#8594;</a>
+                </div>
+                <div class="promo-image">
+                    <img src="images/cart.png" alt="Imagem promocional">
+                </div>
+            </div>
+        </div>
+                </div>
+                  <!-- Adicione a divisão aqui -->
+        <div class="divider"></div>
                 </div>
             </div>
         </div>
@@ -174,7 +198,7 @@
                 <img src="images/play-store.png" alt="" />            
         </div>
     </div>
-
+<!-- vou ajeitar o footer ainda  -->
     <div class="logo-footer">
         <h1 class="logo">HOSP<span>EDIA</span></h1>
         <p>Os melhores hoteis para você</p>
@@ -205,6 +229,24 @@
             navbar.classList.toggle("show-menu")
         })
     </script>
+ <!--Parte do formulário / promoção -->
+<div id="contestForm" class="hidden-form">
+    <h2>Inscreva-se no concurso</h2>
+    <form action="enviar-formulario.php" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone">
+        
+        <button type="submit">Enviar</button>
+        <button type="button" id="closeForm">Fechar</button>
+    </form>
+</div>
+
 
 </body>
 </html>
