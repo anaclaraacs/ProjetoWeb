@@ -174,7 +174,7 @@ header{
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #fff; /* Cor branca para os rótulos */
+    color: #e85a5a; /* Cor branca para os rótulos */
     font-size: 14px;
     text-align: center;
 }
@@ -627,11 +627,17 @@ main{
 }
 
 /*Fotter*/
+
+.gray-background{
+    display: grid;
+    align-content: center;
+}
+
 .footer-content{
     display: flex;
     align-items: center;
     color:#f09b5e;
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
     gap: 2rem;
 }
 .download-options>*{
@@ -657,7 +663,6 @@ main{
 
 }
 
-
 .links-footer ul li{
     margin-bottom: 0.5rem;
     cursor:pointer
@@ -668,7 +673,7 @@ main{
     color: #f09b5e;
 }
 .copyright{
-    color:#fff;
+    color: #f09b5e;
     padding: 2rem 0;
     text-align: center;
 
@@ -712,12 +717,12 @@ main{
 }
 /* Estilização da seção promocional */
 .promo-section {
-    background-color: #9a9696; /* Cor de fundo marrom */
+    background-color: bisque; /* Cor de fundo marrom */
     padding: 40px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff; /* Cor do texto branco */
+    color: rgb(176, 132, 50); /* Cor do texto branco */
 }
 
 .promo-content {
@@ -839,5 +844,4 @@ main{
 
 .visible-form {
     display: block;
-    /* Adicione outros estilos conforme necessário */
 }
